@@ -162,10 +162,8 @@ CRIPTION
 ```
 
 
-さらに、ここで気づくのが、実際にsystem関数を実行したら、commandコマンド(なんかややこしい)を実行していることがわかる。
-
-このcommandコマンドはshellの組み込みコマンドで、"sh -c"と同じように動くらしい(間違えてるかも・・・)。
-shのmanを見ると、使い方が載っている。
+さらに、shのmanを見ると組み込みコマンドとしてcommandという命令があることがわかる。
+このコマンドは"sh -c"と同じように動くらしい(間違えてるかも・・・)。
 
 ```text
 command [-p] [-v] [-V] command [arg ...]
@@ -178,6 +176,8 @@ command [-p] [-v] [-V] command [arg ...]
             -v     Do not execute the command but search for the command and print the absolute pathname of utilities, the name for builtins or the expansion of aliases.
 
 ```
+
+
 
 つまり、実は16進数に変更しなくてもこのcommandコマンドを使用すれば、filter関数を回避できる。
 
